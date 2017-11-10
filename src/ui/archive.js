@@ -33,6 +33,7 @@ function archiveUI (state) {
   else if (stats.version > 0) title += `: ${stats.files} ${pluralize('file', stats.file)} (${pretty(stats.byteLength)})`
   else if (stats.version === 0) title += ': (empty archive)'
   if (state.http && state.http.listening) title += `\nServing files over http at http://localhost:${state.http.port}`
+  if (state.ngrok && state.ngrok.tunneling) title += `\nTunneling to the outside world via ngrok at ${state.ngrok.url}`
 
   if (!state.writable) {
     progressView = downloadUI(state)

@@ -27,7 +27,8 @@ var config = {
     { name: 'quiet', default: debug.enabled, boolean: true }, // use quiet for dat debugging
     { name: 'sparse', default: false, boolean: true, help: 'download only requested data' },
     { name: 'up', help: 'throttle upload bandwidth (1024, 1kb, 2mb, etc.)' },
-    { name: 'down', help: 'throttle download bandwidth (1024, 1kb, 2mb, etc.)' }
+    { name: 'down', help: 'throttle download bandwidth (1024, 1kb, 2mb, etc.)' },
+    { name: 'ngrok', default: false, help: 'tunnel dat served over http to the outside world via ngrok' }
   ],
   root: {
     options: [
