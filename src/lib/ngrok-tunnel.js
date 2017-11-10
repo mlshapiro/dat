@@ -9,10 +9,6 @@ function runNgrok (state, bus) {
   function startNgrok () {
     var port = 8080;
 
-    // ngrok.once('connect', function (url) {
-    //     console.log(`ngrok running at url ${url}`);
-    // });
-
     ngrok.connect({
       proto: 'http',  // http|tcp|tls
       addr: port,     // port or network address
